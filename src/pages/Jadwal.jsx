@@ -22,6 +22,9 @@ const PemberianPage = () => {
       prevIndex === animals.length - 1 ? 0 : prevIndex + 1
     );
   };
+  const handleEdit = () => {
+    
+  };
 
   const handleSubmit = () => {
     const notificationText = `Jadwal ${animals[currentIndex]} berhasil disimpan!`;
@@ -125,7 +128,14 @@ const PemberianPage = () => {
       </div>
 
       {/* Save Button */}
-      <div className="flex justify-end mt-4">
+      <div className="flex justify-end gap-2 mt-4">
+      <button
+        type="button"
+        onClick={handleEdit} // Tambahkan fungsi handleEdit
+        className="text-white bg-[#5c4842] px-4 py-2 rounded-md hover:bg-brown-700"
+      >
+        Edit
+      </button>
         <button
           type="button"
           onClick={handleSubmit}
