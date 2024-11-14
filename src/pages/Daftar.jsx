@@ -92,17 +92,7 @@ const Daftar = () => {
                           ? "password"
                           : "text"
                       }
-                      name={field}
-                      placeholder={
-                        field === "email"
-                          ? "Email"
-                          : field === "phone"
-                          ? "Nomor Telepon"
-                          : field === "username"
-                          ? "Nama Pengguna"
-                          : field === "password"
-                          ? "Kata Sandi"
-                          : "Konfirmasi Kata Sandi"
+                      
                       }
                       value={formData[field]}
                       onChange={handleInputChange}
