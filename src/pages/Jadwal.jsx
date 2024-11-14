@@ -64,7 +64,7 @@ const PemberianPage = () => {
                     htmlFor={`healthCheck-${animal.toLowerCase()}`}
                     className="block font-medium mb-2"
                   >
-                    Pemeriksaan kesehatan
+                    Pemeriksaan kesehatan 
                   </label>
                   <input
                     type="date"
@@ -79,7 +79,7 @@ const PemberianPage = () => {
                     htmlFor={`vaccination-${animal.toLowerCase()}`}
                     className="block font-medium mb-2"
                   >
-                    Vaksin
+                    Vaksinasi
                   </label>
                   <input
                     type="date"
