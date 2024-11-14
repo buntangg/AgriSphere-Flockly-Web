@@ -127,7 +127,7 @@ const Stok = () => {
 
       {/* Tabel Section */}
       <div className="w-full max-w-4xl bg-[#d9d1c2] rounded-lg shadow-md p-6">
-         <h2 className="text-center text-lg font-semibold mb-6">
+         <h2 className="text-center text-white bg-[#5c4842] text-lg font-semibold py-2 px-4 rounded-md mb-6">
           Daftar Produksi
         </h2>
         <table className="min-w-full border border-[#5C4842]">
