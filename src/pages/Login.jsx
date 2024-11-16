@@ -18,8 +18,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem('isAuthenticated', 'true');
-    navigate('/dashboard');
+    localStorage.setItem("isAuthenticated", "true");
+    navigate("/dashboard");
   };
 
   return (
@@ -36,7 +36,7 @@ const Login = () => {
             <img
               src="/Flockly1.png"
               alt="Flockly Logo"
-              className="h-30 mt-10 w-auto"
+              className="h-20 mt-70 w-auto"
             />
           </div>
         </div>
@@ -45,7 +45,11 @@ const Login = () => {
         <div className="w-full md:w-1/2 bg-[#A69783] p-8 flex flex-col justify-center">
           {/* Mobile Logo - only shown on small screens */}
           <div className="md:hidden mb-4 text-center">
-            <img src="/Flockly1.png" alt="Flockly Logo" className="h-8 w-auto inline-block" />
+            <img
+              src="/Flockly1.png"
+              alt="Flockly Logo"
+              className="h-8 w-auto inline-block"
+            />
           </div>
 
           <h1 className="text-white text-3xl font-semibold mb-8 text-center">
@@ -60,7 +64,6 @@ const Login = () => {
               <input
                 type="text"
                 name="username"
-                placeholder="Nomor telepon atau alamat email"
                 value={formData.username}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 rounded-md bg-[#E5DDD3] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#8B7355]"
@@ -74,16 +77,12 @@ const Login = () => {
               <input
                 type="password"
                 name="password"
-                placeholder="Kata sandi"
                 value={formData.password}
                 onChange={handleInputChange}
                 className="w-full px-4 py-3 rounded-md bg-[#E5DDD3] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#8B7355]"
               />
               <div className="flex justify-end">
-                <button
-                  type="button"
-                  className="text-white text-sm hover:underline"
-                >
+                <button type="button" className="text-white text-sm underline">
                   Lupa Kata Sandi?
                 </button>
               </div>
@@ -92,7 +91,7 @@ const Login = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="w-full md:w-auto px-6 py-3 bg-[#5c4842] text-white rounded-md font-medium hover:underline"
+                className="w-full md:w-auto px-40 py-3 bg-[#5c4842] text-white rounded-md font-medium :underline"
               >
                 Masuk
               </button>
@@ -104,8 +103,8 @@ const Login = () => {
               Belum memiliki akun?{" "}
               <button
                 type="button"
-                className="text-white hover:underline font-medium"
-                onClick={() => navigate("/daftar")} 
+                className="text-white font-medium underline"
+                onClick={() => navigate("/daftar")}
               >
                 Daftar sekarang
               </button>
