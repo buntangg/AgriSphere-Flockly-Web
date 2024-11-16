@@ -13,7 +13,7 @@ const Daftar = () => {
 
   const [isComplete, setIsComplete] = useState(false);
   const [passwordMatch, setPasswordMatch] = useState(true);
-  const [showPasswords, setShowPasswords] = useState(false); // Single state for both password fields
+  const [showPasswords, setShowPasswords] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -24,7 +24,9 @@ const Daftar = () => {
       };
 
       // Check if all fields are filled
-      const allFilled = Object.values(updatedData).every((field) => field.trim() !== "");
+      const allFilled = Object.values(updatedData).every(
+        (field) => field.trim() !== ""
+      );
       setIsComplete(allFilled);
 
       // Check if password and confirmPassword match
@@ -65,14 +67,14 @@ const Daftar = () => {
             <img
               src="/Flockly1.png"
               alt="Flockly Logo"
-              className="h-30 mt-10 w-auto"
+              className="h-20 mt-70 w-auto"
             />
           </div>
         </div>
 
         {/* Right Form Section */}
         <div className="w-full md:w-1/2 bg-[#A69783] p-8 flex flex-col justify-center">
-
+          {/* Teks Judul Daftar */}
           <h1 className="text-white text-3xl font-semibold mb-6 text-center">
             Daftar
           </h1>
@@ -80,34 +82,46 @@ const Daftar = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {Object.keys(formData).map((field) => (
               <div key={field} className="relative">
-                {isComplete && formData[field] && (field !== "password" && field !== "confirmPassword") ? (
-                  <p className="text-black bg-[#E5DDD3] px-4 py-3 rounded-md mb-1">
-                    {formData[field]}
-                  </p>
-                ) : (
-                  <>
-                    <input
-                      type={
-                        (field === "password" || field === "confirmPassword") && !showPasswords
-                          ? "password"
-                          : "text"
-                      }
-                      }
-                      value={formData[field]}
-                      onChange={handleInputChange}
-                      className={`w-full px-4 py-3 rounded-md bg-[#E5DDD3] placeholder-gray-500 focus:outline-none focus:ring-2 ${
-                        field === "confirmPassword" && !passwordMatch
-                          ? "focus:ring-red-500"
-                          : "focus:ring-[#8B7355]"
-                      }`}
-                    />
-                  </>
-                )}
+                {/* Label positioned above the input */}
+                <label
+                  htmlFor={field}
+                  className="text-white text-sm font-medium mb-2"
+                >
+                  {field === "email"
+                    ? "Email"
+                    : field === "phone"
+                    ? "Nomor Telepon"
+                    : field === "username"
+                    ? "Nama Pengguna"
+                    : field === "password"
+                    ? "Kata Sandi"
+                    : "Konfirmasi Kata Sandi"}
+                </label>
+
+                <input
+                  id={field}
+                  type={
+                    (field === "password" || field === "confirmPassword") &&
+                    !showPasswords
+                      ? "password"
+                      : "text"
+                  }
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleInputChange}
+                  className={`w-full px-4 py-3 rounded-md bg-[#E5DDD3] placeholder-transparent focus:outline-none focus:ring-2 ${
+                    field === "confirmPassword" && !passwordMatch
+                      ? "focus:ring-red-500"
+                      : "focus:ring-[#8B7355]"
+                  }`}
+                />
               </div>
             ))}
 
             {!passwordMatch && (
-              <p className="text-red-500 text-sm">Password dan Konfirmasi Password harus sama!</p>
+              <p className="text-red-500 text-sm">
+                Password dan Konfirmasi Password harus sama!
+              </p>
             )}
 
             <div className="text-center">
@@ -115,23 +129,10 @@ const Daftar = () => {
                 type="submit"
                 className="w-full px-6 py-3 bg-[#5c4842] text-white rounded-md font-medium hover:underline"
               >
-                {isComplete && passwordMatch ? "Lanjutkan" : "Daftar sekarang"}
+                {isComplete && passwordMatch ? "Lanjutkan" : "Daftar"}
               </button>
             </div>
           </form>
-
-          <div className="mt-6 text-center">
-            <p className="text-white text-sm">
-              Sudah punya akun?{" "}
-              <button
-                type="button"
-                className="text-white hover:underline font-medium"
-                onClick={() => navigate("/")}
-              >
-                Masuk
-              </button>
-            </p>
-          </div>
         </div>
       </div>
     </div>
@@ -139,3 +140,4 @@ const Daftar = () => {
 };
 
 export default Daftar;
+
