@@ -36,7 +36,7 @@ const PemberianPage = () => {
 
   return (
     <div className="bg-[#d9d1c2] rounded-lg shadow-md p-6 w-full max-w-3xl mx-auto relative">
-      <h1 className="text-2xl font-bold mb-4 text-center">Pemberian Pakan</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">Jadwal</h1>
 
       <div className="relative overflow-hidden ">
         {/* Kontainer untuk konten yang dapat digeser */}
