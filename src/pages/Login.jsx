@@ -25,7 +25,7 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F7] flex items-center justify-center p-4">
       <div className="w-full max-w-[900px] h-auto md:h-[500px] bg-white rounded-[20px] overflow-hidden flex flex-col md:flex-row shadow-xl">
-        {/* Left Image Section */}
+       
         <div className="hidden md:block md:w-1/2 relative">
           <img
             src="/rumah.jpg"
@@ -41,9 +41,8 @@ const Login = () => {
           </div>
         </div>
 
-        {/* Right Form Section */}
+       
         <div className="w-full md:w-1/2 bg-[#A69783] p-8 flex flex-col justify-center">
-          {/* Mobile Logo - only shown on small screens */}
           <div className="md:hidden mb-4 text-center">
             <img
               src="/Flockly1.png"
