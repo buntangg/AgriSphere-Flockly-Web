@@ -23,13 +23,13 @@ const Daftar = () => {
         [name]: value,
       };
 
-      // Check if all fields are filled
+     
       const allFilled = Object.values(updatedData).every(
         (field) => field.trim() !== ""
       );
       setIsComplete(allFilled);
 
-      // Check if password and confirmPassword match
+    
       if (name === "password" || name === "confirmPassword") {
         setPasswordMatch(updatedData.password === updatedData.confirmPassword);
       }
@@ -56,7 +56,7 @@ const Daftar = () => {
   return (
     <div className="min-h-screen bg-[#FDF8F7] flex items-center justify-center p-4">
       <div className="w-full max-w-[900px] bg-white rounded-[20px] overflow-hidden flex flex-col md:flex-row shadow-xl">
-        {/* Left Image Section */}
+       
         <div className="hidden md:block w-1/2 relative">
           <img
             src="/rumah.jpg"
@@ -72,9 +72,9 @@ const Daftar = () => {
           </div>
         </div>
 
-        {/* Right Form Section */}
+      
         <div className="w-full md:w-1/2 bg-[#A69783] p-8 flex flex-col justify-center">
-          {/* Teks Judul Daftar */}
+          
           <h1 className="text-white text-3xl font-semibold mb-6 text-center">
             Daftar
           </h1>
@@ -82,7 +82,7 @@ const Daftar = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {Object.keys(formData).map((field) => (
               <div key={field} className="relative">
-                {/* Label positioned above the input */}
+                
                 <label
                   htmlFor={field}
                   className="text-white text-sm font-medium mb-2"
