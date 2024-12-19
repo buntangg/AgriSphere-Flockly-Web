@@ -20,15 +20,15 @@ const Laporan = () => {
 
   // Sample data for each tab
   const chartData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Des'],
     datasets: [
       {
         label: `Pendapatan ${tabs[activeTab]}`,
         data: activeTab === 0 
-          ? [100, 200, 300, 400, 500, 600, 700]  // Ayam Data
+          ? [0]  // Ayam Data
           : activeTab === 1 
-          ? [150, 250, 350, 450, 550, 650, 750]  // Bebek Data
-          : [200, 300, 400, 500, 600, 700, 800], // Puyuh Data
+          ? [0]  // Bebek Data
+          : [0], // Puyuh Data
         borderColor: '#F3B725',
         backgroundColor: 'rgba(243, 183, 37, 0.3)',
         tension: 0.3,
