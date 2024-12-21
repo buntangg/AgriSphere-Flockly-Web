@@ -64,7 +64,7 @@ const Pengaturan = () => {
       )}
 
       {/* Tampilan Profil Pengguna */}
-      {currentView === 'profile' && (
+      {currentView === 'akun' && (
         <div className="w-[500px] p-6 bg-[#f8f4eb] rounded-lg shadow-lg">
           <form onSubmit={handleSaveProfile} className="space-y-4">
             <div className="flex justify-between">
@@ -156,7 +156,7 @@ const Pengaturan = () => {
       )}
 
       {/* Tampilan Pengaturan Akun */}
-      {currentView === 'akun' && (
+      {currentView === 'profile' && (
         <div className="w-[500px] p-6 bg-[#f8f4eb] rounded-lg shadow-lg">
           <h2 className="text-lg font-semibold text-[#4a3d35] mb-4">Pengaturan Akun</h2>
           <div className="space-y-4">
